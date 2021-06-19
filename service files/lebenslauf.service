@@ -1,0 +1,18 @@
+[Unit]
+Description=Backend fuer Lebenslauf
+
+
+[Service]
+ExecStart=/var/www/js/node/lebenslauf_node_backend/server.js
+Restart=always
+
+User=nobody
+Group=nogroup
+
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/js/node/lebenslauf_node_backend/
+
+
+[Install]
+WantedBy=multi-user.target
